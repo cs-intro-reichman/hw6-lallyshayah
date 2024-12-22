@@ -12,15 +12,18 @@ public class Editor2 {
 	public static void main (String[] args){
 		String fileName = args[0];
 		int width = Integer.parseInt(args[1]);
-		int height = Integer.parseInt(args[2]);
-		// Reads the input image and creates an empty output image
-		Color[][] imageIn = Runigram.read(fileName);	
+		int lenght = Integer.parseInt(args[2]);
+
+		Color[][] imageIn = Runigram.read(fileName);
 		Color[][] imageOut = null;
-		imageOut = Runigram.scaled(imageIn, width, height);
-		
-		Runigram.setCanvas(imageOut);
+
+		imageOut = Runigram.scaled(imageIn, width, lenght);
+
+		Runigram.setCanvas(imageIn);
 		Runigram.display(imageIn);
-		StdDraw.pause(3000); 
-		Runigram.display(imageOut);			
+		StdDraw.pause(3000);
+		Runigram.setCanvas(imageOut);
+		Runigram.display(imageOut);
+			
 	}
 }
