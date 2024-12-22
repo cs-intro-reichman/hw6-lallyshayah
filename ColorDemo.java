@@ -61,4 +61,3 @@ public class ColorDemo {
         System.out.print(")  ");
 	}
 }
-
