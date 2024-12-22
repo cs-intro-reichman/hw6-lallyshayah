@@ -1,5 +1,4 @@
-import java.awt.Color;
-
+import java.awt.color.*;
 /** A library of image processing functions. */
 public class Runigram {
 
@@ -73,8 +72,13 @@ public class Runigram {
 	 * Returns an image which is the horizontally flipped version of the given image. 
 	 */
 	public static Color[][] flippedHorizontally(Color[][] image) {
-		//// Replace the following statement with your code
-		return null;
+		Color[][] flipped = new Color[image.length][image[0].length];
+		for(int i = 0; i<flipped[0].length; i++){
+			for(int j = 0; j<flipped.length; j++){
+				flipped[j][i]=image[flipped.length-1-j][i];
+			}
+		}
+		return flipped;
 	}
 	
 	/**
@@ -154,7 +158,6 @@ public class Runigram {
 			}
 		}
 		return blended;
-
 	}
 
 	/**
